@@ -53,7 +53,32 @@ const HeroSection = () => {
           </h3>
         </div>
         <div className="w-[400px] rounded-lg bg-gray-50 p-6">
-          <h4 className="text-primary-brand-color text-center font-semibold">Giriş yap veya kayıt ol</h4>
+          <h4 className="text-primary-brand-color text-center font-semibold mb-4">Giriş yap veya kayıt ol</h4>
+          <div className="grid gap-y-3">
+            <div className="flex gap-x-2">
+              <ReactFlagsSelect
+                countries={Object.keys(phones)}
+                customLabels={phones}
+                selected={selected}
+                onSelect={code => setSelected(code)}
+                className='flag-select'
+              />
+              <label className="flex-1 relative">
+                <input required className="text-sm h-14 px-4 border-2 border-gray-200 w-full rounded transition-colors hover:border-brand-color focus:border-brand-color outline-none peer pt-2" />
+                <span className="absolute inset-0 h-full px-4 flex items-center text-sm text-gray-500 transition-all peer-focus:h-7 peer-focus:text-primary-brand-color peer-focus:text-xs peer-valid:h-7 peer-valid:text-primary-brand-color peer-valid:text-xs">Telefon Numarası</span>
+              </label>
+            </div>
+            <button className="bg-brand-yellow text-primary-brand-color transition-colors hover:bg-primary-brand-color hover:text-brand-yellow h-12 flex items-center justify-center rounded-md w-full text-sm font-semibold ">
+              Telefon numarası ile devam et
+            </button>
+            <hr className="h-[1px] bg-gray-300 my-2" />
+            <button className="bg-blue-700 bg-opacity-10 px-4 text-blue-700 text-opacity-80 transition-colors hover:bg-primary-brand-color hover:text-brand-yellow h-12 flex items-center rounded-md w-full text-sm font-semibold ">
+              <FaFacebook size={24} />
+              <span className="mx-auto">
+                Facebook ile devam et
+              </span>
+            </button>
+          </div>
         </div>
 
       </div>
