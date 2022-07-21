@@ -1,7 +1,19 @@
+import { useState } from "react";
 import Slider from "react-slick";
+import { FaFacebook } from 'react-icons/fa';
+import ReactFlagsSelect from "react-flags-select";
 
 
 const HeroSection = () => {
+
+  const [selected, setSelected] = useState("TR");
+  const phones = {
+    US: '+1',
+    DE: '+50',
+    TR: '+90',
+    IT: '+7',
+    IN: '+15'
+  }
 
   const settings = {
     dots: false,
@@ -9,8 +21,12 @@ const HeroSection = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    speed:500,
+    autoplaySpeed:3500,
     arrows: false
   };
+
 
   return (
     <div className="relative h-[500px] before:absolute before:bg-gradient-to-r before:from-primary-brand-color before:to-transparent before:top-0 before:inset-0 before:w-full before:h-full before:z-10">
