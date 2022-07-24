@@ -1,7 +1,7 @@
 
 const MobileApp = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mt-10">
       <div className="bg-primary-brand-color flex justify-between items-center bg-mobile-app rounded-lg text-white">
         <div className="flex flex-col gap-y-3 p-10">
           <h3 className="text-2xl font-bold tracking-tight">Getir'i indirin!</h3>
