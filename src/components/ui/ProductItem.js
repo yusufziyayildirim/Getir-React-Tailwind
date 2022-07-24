@@ -3,7 +3,7 @@ import { AiOutlinePlus } from 'react-icons/ai';
 const ProductItem = ({ product }) => {
     return (
         <div className="relative bg-white flex flex-col gap-y-1 items-center text-center text-sm font-semibold p-3">
-            <button className='absolute bg-white top-3 right-3 w-8 h-8 flex items-center justify-center border border-gray-50 rounded-lg text-brand-color shadow-md hover:border-brand-color transition-colors'>
+            <button className='absolute bg-white top-3 right-3 w-8 h-8 flex items-center justify-center border border-gray-100 rounded-lg text-brand-color shadow-md hover:bg-purple-50 transition-colors'>
                 <AiOutlinePlus />
             </button>
             <img src={product.image} alt={product.title} />

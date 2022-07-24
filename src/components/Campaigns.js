@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import Banners from 'api/banners.json';
-import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
-function NextBtn({onClick } ) {
+function NextBtn({ onClick }) {
   return (
     <button className="text-brand-color absolute top-1/2 -right-6 -translate-y-1/2" onClick={onClick}>
       <IoIosArrowForward size={22} />
-    </button> 
+    </button>
   )
 }
 
-function PrevBtn({onClick } ) {
+function PrevBtn({ onClick }) {
   return (
     <button className="text-brand-color absolute top-1/2 -left-6 -translate-y-1/2" onClick={onClick}>
-      <IoIosArrowBack size={22}/>
-    </button> 
+      <IoIosArrowBack size={22} />
+    </button>
   )
 }
 
@@ -32,24 +32,49 @@ const Campaigns = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     speed: 500,
     autoplaySpeed: 2000,
     arrows: true,
     nextArrow: <NextBtn />,
-    prevArrow: <PrevBtn />
-    
+    prevArrow: <PrevBtn />,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+          arrows: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: true
+        }
+      }
+    ]
   };
 
   return (
     <div className="container mx-auto py-8">
       <h3 className="text-sm font-semibold mb-3">Kampanyalar</h3>
       <Slider {...settings} className="-mx-2">
-        {banners.length && banners.map((banner) => 
+        {banners.length && banners.map((banner) =>
           <div key={banner.id} className="px-2">
-            <img src={banner.image} className="rounded-lg"/>
+            <img src={banner.image} className="rounded-lg" />
           </div>
         )}
       </Slider>

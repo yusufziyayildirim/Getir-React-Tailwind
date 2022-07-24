@@ -29,7 +29,7 @@ const HeroSection = () => {
 
 
   return (
-    <div className="relative h-[500px] before:absolute before:bg-gradient-to-r before:from-primary-brand-color before:to-transparent before:top-0 before:inset-0 before:w-full before:h-full before:z-10">
+    <div className="relative h-auto md:h-[500px] before:absolute before:bg-gradient-to-r before:from-primary-brand-color before:to-transparent before:top-0 before:inset-0 before:w-full before:h-full before:z-10">
       <Slider {...settings}>
         <div>
           <img className="w-full h-[500px] object-cover" src="https://getir.com/_next/static/images/getir-mainpage-4-1751ad2d8fb42a88742d6751938da7e7.jpg" alt="slider-item" />
@@ -46,13 +46,13 @@ const HeroSection = () => {
       </Slider>
 
       <div className="container flex justify-between items-center absolute top-0 left-1/2 -translate-x-1/2 h-full z-20">
-        <div>
+        <div className="hidden md:block">
           <img src="https://getir.com/_next/static/images/bimutluluk-b3a7fcb14fc9a9c09b60d7dc9b1b8fd6.svg" alt="logo" />
           <h3 className="mt-8 text-4xl font-semibold text-white">
             Dakikalar içinde <br /> kapınızda
           </h3>
         </div>
-        <div className="w-[400px] rounded-lg bg-gray-50 p-6">
+        <div className="w-full md:w-[400px] rounded-lg bg-gray-50 p-6">
           <h4 className="text-primary-brand-color text-center font-semibold mb-4">Giriş yap veya kayıt ol</h4>
           <div className="grid gap-y-3">
             <div className="flex gap-x-2">
