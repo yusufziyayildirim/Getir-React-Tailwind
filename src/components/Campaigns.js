@@ -46,7 +46,6 @@ const Campaigns = () => {
         settings: {
           slidesToShow: 3,
           arrows: false,
-          dots: true
         }
       },
       {
@@ -54,7 +53,6 @@ const Campaigns = () => {
         settings: {
           slidesToShow: 2,
           arrows: false,
-          dots: true
         }
       },
       {
@@ -62,19 +60,18 @@ const Campaigns = () => {
         settings: {
           slidesToShow: 1,
           arrows: false,
-          dots: true
         }
       }
     ]
   };
 
   return (
-    <div className="container mx-auto py-8">
-      <h3 className="text-sm font-semibold mb-3">Kampanyalar</h3>
-      <Slider {...settings} className="-mx-2">
+    <div className="container mx-auto mt-2 md:pt-8">
+      <h3 className="text-sm font-semibold mb-3 hidden md:block">Kampanyalar</h3>
+      <Slider {...settings} className="md:-mx-2">
         {banners.length && banners.map((banner) =>
           <div key={banner.id} className="px-2">
-            <img src={banner.image} className="rounded-lg" />
+            <img src={banner.image} className="md:rounded-lg" />
           </div>
         )}
       </Slider>
